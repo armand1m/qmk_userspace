@@ -1,6 +1,7 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
-        ["crkbd", "armand1m"]
+        ["crkbd", "armand1m"],
+        ["splitkb/kyria/rev2", "armand1m"]
     ]
 }
