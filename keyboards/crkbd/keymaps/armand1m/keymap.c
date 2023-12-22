@@ -176,13 +176,14 @@ void oled_render_image(void) {
     oled_write_raw_P(image, sizeof(image));
 }
 
-void oled_task_user(void) {
-  if (is_master) {
+bool oled_task_user(void) {
+  if (is_keyboard_master()) {
         oled_render_layer_state();
         oled_render_wpm();
     } else {
         oled_render_image();
     }
+    return false;
 }
 #endif // OLED_DRIVER_ENABLE
 
